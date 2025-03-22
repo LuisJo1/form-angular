@@ -1,0 +1,221 @@
+<div class="p-4">
+  <div class="border-b-1 border-gray-200 pb-4">
+    <p class="text-gray-400 font-medium">
+      <span>Dashboard</span> / <span>Main</span> /
+      <span class="text-gray-500">Dashboard</span>
+    </p>
+    <h2 class="font-medium text-lg">Good morning, John, Welcome to NCI</h2>
+  </div>
+
+  <section class="flex justify-between items-start mt-10">
+    <div class="flex space-x-6 mt-4 max-w-9/12">
+      <div class="p-2">
+        <img
+          class="w-10 mx-auto block border-3 rounded-3xl p-2"
+          src="assets/img/location-icon.svg"
+          alt="Location Icon"
+        />
+        <p class="text-center mt-6">Enter your details</p>
+      </div>
+      <div class="p-2">
+        <img
+          class="w-10 mx-auto block border rounded-3xl p-2"
+          src="assets/img/lock-icon.svg"
+          alt="Location Icon"
+        />
+        <p class="text-center mt-6">Verify identity</p>
+      </div>
+      <div class="p-2">
+        <img
+          class="w-10 mx-auto block border rounded-3xl p-2"
+          src="assets/img/lock-icon.svg"
+          alt="Location Icon"
+        />
+        <p class="text-center mt-6">Terms of use</p>
+      </div>
+      <div class="p-2">
+        <img
+          class="w-10 mx-auto block border rounded-3xl p-2"
+          src="assets/img/lock-icon.svg"
+          alt="Location Icon"
+        />
+        <p class="text-center mt-6">Docusing</p>
+      </div>
+      <div class="p-2">
+        <img
+          class="w-10 mx-auto block border rounded-3xl p-2"
+          src="assets/img/lock-icon.svg"
+          alt="Location Icon"
+        />
+        <p class="text-center mt-6">Upgrade account</p>
+      </div>
+      <div class="p-2">
+        <img
+          class="w-10 mx-auto block border rounded-3xl p-2"
+          src="assets/img/lock-icon.svg"
+          alt="Location Icon"
+        />
+        <p class="text-center mt-6">My tasks</p>
+      </div>
+    </div>
+    <div class="border border-gray-200 mt-4 rounded-lg min-w-3/12">
+      <p class="py-2 px-4 border-b-1 border-gray-200 font-medium">Verify KYC</p>
+      <div class="py-2 px-3">
+        <div
+          class="flex justify-center align-middle space-x-2 bg-gray-400 p-2 rounded-sm"
+        >
+          <button class="bg-gray-400">Complete this step to continue</button
+          ><img class="w-6" src="assets/img/arrow-r.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="mt-10 max-w-9/12 mb-10">
+    <h2 class="border-b-1 border-gray-200 text-xl font-medium pb-4">
+      Update your details
+    </h2>
+    <div class="border border-gray-200 rounded-lg mt-10 p-4">
+      <p class="text-red-600 bg-red-300 rounded-lg p-2 text-center">
+        Please fill out your basic information
+      </p>
+    </div>
+
+    <div class="border border-gray-200 rounded-lg mt-10 p-4">
+      <div>
+        <p class="text-xl font-medium border-b-1 border-gray-200 pb-4">
+          Basic informartion
+        </p>
+      </div>
+
+      <div class="mt-10">
+        <div class="flex mt-4">
+          <label class="font-medium text-gray-700 w-[280px]" for=""
+            >Profile picture</label
+          >
+          <div class="w-full">
+            <img class="w-16" src="assets/img/profile.jpg" alt="" />
+          </div>
+        </div>
+        <div class="flex mt-4">
+          <label class="font-medium text-gray-700 w-[280px]" for=""
+            >Full name</label
+          >
+          <div class="flex w-full">
+            <input
+              type="text"
+              class="border border-gray-200 rounded-sm p-2 w-2/4"
+              id="name" formControlName="name"
+            />
+            <input
+              type="text"
+              class="border border-gray-200 rounded-sm p-2 w-2/4"
+              id="surname" formControlName="surname"
+            />
+          </div>
+         
+        </div>
+        
+        
+        <div class="flex mt-4">
+          <label class="font-medium text-gray-700 w-[280px]" for=""
+            >Email</label
+          >
+          <div class="flex w-full">
+            <input
+              type="text"
+              class="border border-gray-200 rounded-sm p-2 w-4/4"
+              id="email" formControlName="email"
+            />
+          </div>
+        </div>
+        <div class="flex mt-4">
+          <label class="font-medium text-gray-700 w-[280px]" for=""
+            >Phone</label
+          >
+          <div class="flex w-full">
+            <input
+              type="text"
+              class="border border-gray-200 rounded-sm p-2 w-1/6"
+              id="whats_app" formControlName="whats_app"
+            />
+            <input
+              type="text"
+              class="border border-gray-200 rounded-sm p-2 w-5/6"
+              id="phone"  formControlName="phone"
+            />
+          </div>
+        </div>
+        <div class="flex mt-4">
+          <label class="font-medium text-gray-700 w-[280px]" for=""
+            >Address</label
+          >
+          <div class="flex w-full">
+            <input
+              type="text"
+              class="border border-gray-200 rounded-sm p-2 w-6/6"
+              id="address"  formControlName="address"
+            />
+          </div>
+        </div>
+        <div class="flex mt-4">
+          <label class="font-medium text-gray-700 w-[280px]" for=""
+            >Country</label
+          >
+          <div class="flex w-full">
+            <select
+              name=""
+              id="country_id"  formControlName="country_id"
+              class="border border-gray-200 rounded-sm p-2 w-6/6"
+            >
+              <option [defaultSelected]="0"></option>
+              <option value="1">Serbia</option>
+              <option value="2">España</option>
+              <option value="3">Alemania</option>
+              <option value="4">Francia</option>
+            </select>
+          </div>
+        </div>
+        <div class="flex mt-4">
+          <label class="font-medium text-gray-700 w-[280px]" for=""
+            >Passport Number</label
+          >
+          <div class="flex w-full">
+            <input
+              type="text"
+              class="border border-gray-200 rounded-sm p-2 w-6/6"
+            />
+          </div>
+        </div>
+        <div class="flex mt-4">
+          <label class="font-medium text-gray-700 w-[280px]" for=""
+            >Passport Issuer</label
+          >
+          <div class="flex w-full">
+            <input
+              type="text"
+              class="border border-gray-200 rounded-sm p-2 w-6/6"
+            />
+          </div>
+        </div>
+        <div class="flex mt-4">
+          <label class="font-medium text-gray-700 w-[280px]" for=""
+            >Passport Expiration Date</label
+          >
+          <div class="flex w-full">
+            <input
+              type="text"
+              class="border border-gray-200 rounded-sm p-2 w-6/6"
+            />
+          </div>
+        </div>
+
+        <div class="flex justify-end mt-4">
+          <button type="submit" class="bg-blue-900 text-white py-2 px-4 rounded-lg font-medium cursor-pointer">Save changes</button>
+        </div>
+
+
+      </div>
+    </div>
+  </Form>
+</div>
