@@ -18,8 +18,8 @@ export class FormUserComponent {
     this.userForm = this.fb.group({
       name: ['', [Validators.required]], 
       surname: [''], 
-      country_id: [null, [Validators.required]], 
-      status_id: [null, ],
+      country_id: [187, [Validators.required]], 
+      status_id: [20, ],
       phone: [''], 
       email: ['', [Validators.email]], 
       kyc_filled: [false], 
