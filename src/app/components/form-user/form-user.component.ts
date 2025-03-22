@@ -38,7 +38,12 @@ export class FormUserComponent {
       docusign_filled: [false], 
       disabled: [false], 
       role: [''], 
-      avatar_photo: [null] 
+      avatar_photo: [null] ,
+      passport: this.fb.group({ // FormGroup anidado para passport
+        passport_number: [''],
+        passport_issuer: [''],
+        passport_expiration_date: ['']
+      })
     });
   }
 

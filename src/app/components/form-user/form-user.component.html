@@ -169,14 +169,14 @@
               class="border border-gray-200 rounded-sm p-2 w-6/6"
             >
               <option [defaultSelected]="0"></option>
-              <option value="1">Serbia</option>
-              <option value="2">España</option>
-              <option value="3">Alemania</option>
-              <option value="4">Francia</option>
+              <option value="187">Serbia</option>
+              <option value="187">España</option>
+              <option value="187">Alemania</option>
+              <option value="187">Francia</option>
             </select>
           </div>
         </div>
-        <div class="flex mt-4">
+        <div class="flex mt-4" formGroupName="passport">
           <label class="font-medium text-gray-700 w-[280px]" for=""
             >Passport Number</label
           >
@@ -184,10 +184,11 @@
             <input
               type="text"
               class="border border-gray-200 rounded-sm p-2 w-6/6"
+              id="passport_number"  formControlName="passport_number"
             />
           </div>
         </div>
-        <div class="flex mt-4">
+        <div class="flex mt-4" formGroupName="passport">
           <label class="font-medium text-gray-700 w-[280px]" for=""
             >Passport Issuer</label
           >
@@ -195,10 +196,11 @@
             <input
               type="text"
               class="border border-gray-200 rounded-sm p-2 w-6/6"
+              id="passport_issuer"  formControlName="passport_issuer"
             />
           </div>
         </div>
-        <div class="flex mt-4">
+        <div class="flex mt-4" formGroupName="passport">
           <label class="font-medium text-gray-700 w-[280px]" for=""
             >Passport Expiration Date</label
           >
@@ -206,6 +208,7 @@
             <input
               type="text"
               class="border border-gray-200 rounded-sm p-2 w-6/6"
+              id="passport_expiration_date"  formControlName="passport_expiration_date"
             />
           </div>
         </div>
